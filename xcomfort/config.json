@@ -1,7 +1,7 @@
 {
-    "name": "xComfortd",
+    "name": "xComfort",
     "version": "0.1",
-    "slug": "xcomfortd",
+    "slug": "xcomfort",
     "description": "Eaton xComfort to MQTT gateway",
     "startup": "application",
     "boot": "auto",
@@ -25,7 +25,7 @@
         "mqtt:need"
     ],
     "options": {
-        "mqtt_client_id": "xcomfortd",
+        "mqtt_client_id": "xcomfort",
         "datapoints_file": "Datenpunkte.txt",
         "device_number": 0,
         "ha_discovery": true,
