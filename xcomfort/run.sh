@@ -16,7 +16,7 @@ HA_DISCOVERY="$(bashio::config 'ha_discovery')"
 HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
 
-set -- xcomfortd-go usb \
+set -- xcomfortd usb \
     --client-id ${MQTT_CLIENT_ID} \
     --server "tcp://${MQTT_USER}:${MQTT_PASSWORD}@${MQTT_HOST}:${MQTT_PORT}" \
     --device-number ${DEVICE_NUMBER} \
@@ -31,7 +31,7 @@ if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
 
-bashio::log.info "Starting $(xcomfortd-go --version)"
+bashio::log.info "Starting $(xcomfortd --version)"
 bashio::log.debug "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
 
 exec "$@"
