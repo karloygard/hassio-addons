@@ -5,7 +5,7 @@ WORKDIR /build
 RUN git clone https://github.com/karloygard/xcomfortd-go
 WORKDIR xcomfortd-go
 RUN go get .
-RUN go build .
+RUN CGO_ENABLED=0 go build .
 
 FROM $BUILD_FROM
 
