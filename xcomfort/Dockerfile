@@ -1,3 +1,4 @@
+ARG BUILD_FROM
 FROM golang:latest
 
 WORKDIR /build
@@ -6,9 +7,12 @@ WORKDIR xcomfortd-go
 RUN go get .
 RUN go build .
 
-FROM alpine:latest  
+FROM $BUILD_FROM
+
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=0 /build/xcomfortd-go/xcomfortd-go .
+
 COPY run.sh /run.sh
+
 CMD [ "/run.sh" ]
