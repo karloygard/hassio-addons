@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM golang:alpine3.11 as builder
 
-RUN apk add --no-cache gcc musl-dev linux-headers
+RUN apk add --no-cache gcc musl-dev linux-headers git
 
 WORKDIR /build
 RUN git clone https://github.com/karloygard/xcomfortd-go
