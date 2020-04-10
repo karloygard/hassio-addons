@@ -31,7 +31,7 @@ if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
 
-bashio::log.info "Starting $(xcomfortd --version)"
+bashio::log.info "Starting $(xcomfortd-go --version)"
 bashio::log.debug "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
 
 exec "$@"

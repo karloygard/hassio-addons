@@ -19,7 +19,7 @@ You need to export the datapoints file with the CKOZ-00/13 USB stick and the ass
 Add-on configuration:
 
 ```yaml
-mqtt_client_id: xcomfortd
+mqtt_client_id: xcomfort
 datapoints_file: Datenpunkte.txt
 device_number: 0
 verbose: false
