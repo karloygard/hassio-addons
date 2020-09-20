@@ -1,6 +1,6 @@
 {
     "name": "xComfort",
-    "version": "0.2",
+    "version": "0.3",
     "slug": "xcomfort",
     "description": "Eaton xComfort to MQTT gateway",
     "startup": "application",
@@ -26,7 +26,8 @@
     ],
     "options": {
         "mqtt_client_id": "xcomfort",
-        "datapoints_file": "Datenpunkte.txt",
+        "datapoints_file": "",
+        "eprom": true,
         "device_number": 0,
         "ha_discovery": true,
         "ha_discovery_prefix": "homeassistant",
@@ -35,6 +36,7 @@
     "schema": {
         "mqtt_client_id": "str",
         "datapoints_file": "str",
+        "eprom": "bool",
         "device_number": "int",
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",

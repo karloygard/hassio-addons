@@ -11,6 +11,7 @@ MQTT_USER=$(bashio::services mqtt "username")
 MQTT_PASSWORD=$(bashio::services mqtt "password")
 
 DATAPOINTS_FILE="$(bashio::config 'datapoints_file')"
+EPROM="$(bashio::config 'eprom')"
 DEVICE_NUMBER="$(bashio::config 'device_number')"
 HA_DISCOVERY="$(bashio::config 'ha_discovery')"
 HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
@@ -20,8 +21,15 @@ set -- xcomfortd usb \
     --client-id ${MQTT_CLIENT_ID} \
     --server "tcp://${MQTT_USER}:${MQTT_PASSWORD}@${MQTT_HOST}:${MQTT_PORT}" \
     --device-number ${DEVICE_NUMBER} \
-    --file "${CONFIG_PATH}/${DATAPOINTS_FILE}" \
     --hadiscoveryprefix ${HA_DISCOVERY_PREFIX}
+
+if [ "$EPROM" = "true" ]; then
+    set -- "$@" --eprom
+fi
+
+if [ "$DATAPOINTS_FILE" != "" ]; then
+    set -- "$@" --file "${CONFIG_PATH}/${DATAPOINTS_FILE}"
+fi
 
 if [ "$HA_DISCOVERY" = "true" ]; then
     set -- "$@" --hadiscovery

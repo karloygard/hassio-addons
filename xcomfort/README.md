@@ -12,7 +12,7 @@ To view the source code of this daemon, go to [github.com/karloygard/xcomfortd-g
 
 ## How to use
 
-You need to export the datapoints file with the CKOZ-00/13 USB stick and the associated MRF software. Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this. The format must be TXT. Place that file in the configuration directory of Home Assistant.
+Datapoints can be read out from the eprom of the stick, and must be kept updated if and when devices are added.  Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this.  Optionally, both TXT and DPL file formats are supported, but the latter format is generally superior.
 
 ## Configuration
 
@@ -20,7 +20,7 @@ Add-on configuration:
 
 ```yaml
 mqtt_client_id: xcomfort
-datapoints_file: Datenpunkte.txt
+eprom: true
 device_number: 0
 verbose: false
 ha_discovery: true
@@ -31,9 +31,13 @@ ha_discovery_prefix: homeassistant
 
 ID of the MQTT client the daemon connects with. 
 
-### Option: `datapoints_file` (required)
+### Option: `datapoints_file` (optional)
 
 Name of the datapoints file in the Home Assistant configuration directory.
+
+### Option: `eprom` (optional)
+
+Read datapoint list from eprom.
 
 ### Option: `device_number` (required)
 
