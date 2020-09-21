@@ -40,6 +40,6 @@ if [ "$VERBOSE" = "true" ]; then
 fi
 
 bashio::log.info "Starting $(xcomfortd --version)"
-bashio::log.debug "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
+bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
 
 exec "$@"

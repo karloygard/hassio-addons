@@ -20,6 +20,7 @@ Add-on configuration:
 
 ```yaml
 mqtt_client_id: xcomfort
+datapoints_file: ""
 eprom: true
 device_number: 0
 verbose: false
