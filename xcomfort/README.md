@@ -24,6 +24,7 @@ datapoints_file: ""
 eprom: true
 device_number: 0
 verbose: false
+use_libusb: true
 ha_discovery: true
 ha_discovery_prefix: homeassistant
 ```
@@ -55,6 +56,10 @@ The Home Assistant discovery prefix.
 ### Option: `verbose` (required)
 
 Enable verbose logging.
+
+### Option: `use_libusb` (required)
+
+Use libusb vs hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
 
 ## License
 

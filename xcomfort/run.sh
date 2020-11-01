@@ -16,8 +16,14 @@ DEVICE_NUMBER="$(bashio::config 'device_number')"
 HA_DISCOVERY="$(bashio::config 'ha_discovery')"
 HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
+LIBUSB="$(bashio::config 'use_libusb')"
 
-set -- xcomfortd usb \
+COMM_MODE=usb
+if [ "$LIBUSB" = "false" ]; then
+    COMM_MODE=hid
+fi
+
+set -- xcomfortd ${COMM_MODE} \
     --client-id ${MQTT_CLIENT_ID} \
     --server "tcp://${MQTT_USER}:${MQTT_PASSWORD}@${MQTT_HOST}:${MQTT_PORT}" \
     --device-number ${DEVICE_NUMBER} \

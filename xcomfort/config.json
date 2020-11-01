@@ -1,6 +1,6 @@
 {
     "name": "xComfort",
-    "version": "0.11",
+    "version": "0.12",
     "slug": "xcomfort",
     "description": "Eaton xComfort to MQTT gateway",
     "startup": "application",
@@ -31,7 +31,8 @@
         "device_number": 0,
         "ha_discovery": true,
         "ha_discovery_prefix": "homeassistant",
-        "verbose": false
+        "verbose": false,
+        "use_libusb": true
     },
     "schema": {
         "mqtt_client_id": "str",
@@ -40,6 +41,7 @@
         "device_number": "int",
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",
-        "verbose": "bool"
+        "verbose": "bool",
+        "use_libusb": "bool"
     }
 }
