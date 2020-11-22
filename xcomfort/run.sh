@@ -18,15 +18,9 @@ HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
 LIBUSB="$(bashio::config 'use_libusb')"
 
-COMM_MODE=usb
-if [ "$LIBUSB" = "false" ]; then
-    COMM_MODE=hid
-fi
-
-set -- xcomfortd ${COMM_MODE} \
+set -- xcomfortd \
     --client-id ${MQTT_CLIENT_ID} \
     --server "tcp://${MQTT_USER}:${MQTT_PASSWORD}@${MQTT_HOST}:${MQTT_PORT}" \
-    --device-number ${DEVICE_NUMBER} \
     --hadiscoveryprefix ${HA_DISCOVERY_PREFIX}
 
 if [ "$EPROM" = "true" ]; then
@@ -44,6 +38,14 @@ fi
 if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
+
+COMM_MODE=usb
+if [ "$LIBUSB" = "false" ]; then
+    COMM_MODE=hid
+fi
+
+set -- ${COMM_MODE} \
+    --device-number ${DEVICE_NUMBER} \
 
 bashio::log.info "Starting $(xcomfortd --version)"
 bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
