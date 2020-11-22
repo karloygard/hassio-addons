@@ -44,7 +44,7 @@ if [ "$LIBUSB" = "false" ]; then
     COMM_MODE=hid
 fi
 
-set -- ${COMM_MODE} \
+set -- "$@" ${COMM_MODE} \
     --device-number ${DEVICE_NUMBER} \
 
 bashio::log.info "Starting $(xcomfortd --version)"
