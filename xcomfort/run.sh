@@ -39,13 +39,12 @@ if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
 
-COMM_MODE=usb
 if [ "$LIBUSB" = "false" ]; then
-    COMM_MODE=hid
+    set -- "$@" hid \
+        --device-number ${DEVICE_NUMBER}
+else
+    set -- "$@" usb
 fi
-
-set -- "$@" ${COMM_MODE} \
-    --device-number ${DEVICE_NUMBER} \
 
 bashio::log.info "Starting $(xcomfortd --version)"
 bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
