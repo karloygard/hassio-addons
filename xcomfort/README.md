@@ -63,9 +63,9 @@ One of `usb`, `hid` or `eci`.
 
 - `usb`: Talk to the USB stick with libusb.  Recommended.
 - `hid`: Talk to the USB stick with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
-- `eci`: Talk to an ECI device.  The address is specified with `host`.
+- `eci`: Talk to an ECI device.  The address is specified with `eci_host`.
 
-### Option: `host` (optional)
+### Option: `eci_host` (optional)
 
 Host address of the ECI device, when used.
 
