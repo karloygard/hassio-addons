@@ -2,6 +2,10 @@
 
 Enable communication with the Eaton xComfort CKOZ-00/14 Communication stick.
 
+## BREAKING CHANGES
+
+Due to support for ECI, the configuration schema had to be reworked and will prevent the daemon from starting if not updated.  Suggested solution is to reset to defaults.
+
 ## About
 
 xComfort is a wireless European home automation system, using the 868,3MHz band. The system is closed source. This code was reverse engineered from a variety of sources, without documentation from Eaton, and may not follow their specifications. If this code damages your devices, it's on you.
