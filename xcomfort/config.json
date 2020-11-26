@@ -32,7 +32,7 @@
         "ha_discovery": true,
         "ha_discovery_prefix": "homeassistant",
         "verbose": false,
-        "use_libusb": true
+        "interface": "usb"
     },
     "schema": {
         "mqtt_client_id": "str",
@@ -42,7 +42,7 @@
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",
         "verbose": "bool",
-        "use_libusb": "bool",
-        "test": "list(usb|hid|eci)?"
+        "interface": "list(usb|hid|eci)",
+        "eci_host": "str?"
     }
 }

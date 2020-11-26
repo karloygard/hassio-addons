@@ -16,7 +16,8 @@ DEVICE_NUMBER="$(bashio::config 'device_number')"
 HA_DISCOVERY="$(bashio::config 'ha_discovery')"
 HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
-LIBUSB="$(bashio::config 'use_libusb')"
+INTERFACE="$(bashio::config 'interface')"
+ECI_HOST="$(bashio::config 'eci_host')"
 
 set -- xcomfortd \
     --client-id ${MQTT_CLIENT_ID} \
@@ -39,11 +40,14 @@ if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
 
-if [ "$LIBUSB" = "false" ]; then
+if [ "$INTERFACE" = "hid" ]; then
     set -- "$@" hid \
         --device-number ${DEVICE_NUMBER}
-else
+else if [ "$INTERFACE" = "usb" ]; then
     set -- "$@" usb
+else if [ "$INTERFACE" = "eci" ]; then
+    set -- "$@" eci \
+        --host ${ECI_HOST}
 fi
 
 bashio::log.info "Starting $(xcomfortd --version)"
