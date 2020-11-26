@@ -24,7 +24,7 @@ datapoints_file: ""
 eprom: true
 device_number: 0
 verbose: false
-use_libusb: true
+interface: usb
 ha_discovery: true
 ha_discovery_prefix: homeassistant
 ```
@@ -41,7 +41,7 @@ Name of the datapoints file in the Home Assistant configuration directory.
 
 Read datapoint list from eprom.
 
-### Option: `device_number` (required)
+### Option: `device_number` (optional)
 
 USB device number, if more than one is available.
 
@@ -57,9 +57,17 @@ The Home Assistant discovery prefix.
 
 Enable verbose logging.
 
-### Option: `use_libusb` (required)
+### Option: `interface` (required)
 
-Use libusb vs hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
+One of `usb`, `hid` or `eci`.
+
+- `usb`: Talk to the USB stick with libusb.  Recommended.
+- `hid`: Talk to the USB stick with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
+- `eci`: Talk to an ECI device.  The address is specified with `host`.
+
+### Option: `host` (optional)
+
+Host address of the ECI device, when used.
 
 ## License
 

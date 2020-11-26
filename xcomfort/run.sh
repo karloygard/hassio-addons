@@ -43,9 +43,9 @@ fi
 if [ "$INTERFACE" = "hid" ]; then
     set -- "$@" hid \
         --device-number ${DEVICE_NUMBER}
-else if [ "$INTERFACE" = "usb" ]; then
+elif [ "$INTERFACE" = "usb" ]; then
     set -- "$@" usb
-else if [ "$INTERFACE" = "eci" ]; then
+elif [ "$INTERFACE" = "eci" ]; then
     set -- "$@" eci \
         --host ${ECI_HOST}
 fi
