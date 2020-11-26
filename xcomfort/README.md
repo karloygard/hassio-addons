@@ -4,7 +4,7 @@ Enable communication with the Eaton xComfort CKOZ-00/14 Communication stick.
 
 ## BREAKING CHANGES
 
-Due to support for ECI, the configuration schema had to be reworked and will prevent the daemon from starting if not updated.  Suggested solution is to reset to defaults.
+**Due to support for ECI, the configuration schema had to be reworked and will prevent the daemon from starting if not updated.  Suggested solution is to reset to defaults.**
 
 ## About
 
