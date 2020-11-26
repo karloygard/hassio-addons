@@ -42,6 +42,7 @@
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",
         "verbose": "bool",
-        "use_libusb": "bool"
+        "use_libusb": "bool",
+        "test": "list(usb|hid|eci)?"
     }
 }
