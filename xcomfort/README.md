@@ -1,6 +1,6 @@
 # Home Assistant Addon: xComfort
 
-Enable communication with the Eaton xComfort CKOZ-00/14 Communication stick.
+Enable communication with the Eaton xComfort CKOZ-00/14 USB and CCIA-0x/01 Ethernet Communication Interfaces.
 
 ## BREAKING CHANGES
 
@@ -8,15 +8,15 @@ Enable communication with the Eaton xComfort CKOZ-00/14 Communication stick.
 
 ## About
 
-xComfort is a wireless European home automation system, using the 868,3MHz band. The system is closed source. This code was reverse engineered from a variety of sources, without documentation from Eaton, and may not follow their specifications. If this code damages your devices, it's on you.
+xComfort is a wireless European home automation system, using the 868,3MHz band. The system is closed source. This code was reverse engineered from a variety of sources, without documentation from Eaton, and may not follow their specifications.
 
-This code supports both extended and regular status messages. Older devices only send the latter, which are not routed and have no delivery guarantees. Careful placement of the USB stick is important, so that it can see these messages.
+This code supports both extended and regular status messages. Older devices only send the latter, which are not routed and have no delivery guarantees. Careful placement of the CI is important, so that it can see these messages, or you will need to use more than one CI to improve coverage.
 
 To view the source code of this daemon, go to [github.com/karloygard/xcomfortd-go](https://github.com/karloygard/xcomfortd-go).
 
 ## How to use
 
-Datapoints can be read out from the eprom of the stick, and must be kept updated if and when devices are added.  Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this.  Optionally, both TXT and DPL file formats are supported, but the latter format is generally superior.
+Datapoints can be read out from the eprom of the CI, and must be kept updated if and when devices are added.  Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this.  For testing purposes, both TXT and DPL file formats are supported, but the latter format is generally superior.
 
 ## Configuration
 
@@ -39,7 +39,7 @@ ID of the MQTT client the daemon connects with.
 
 ### Option: `datapoints_file` (optional)
 
-Name of the datapoints file in the Home Assistant configuration directory.
+Name of the datapoints file in the Home Assistant configuration directory.  Recommend the `eprom` option instead.
 
 ### Option: `eprom` (optional)
 
@@ -65,8 +65,8 @@ Enable verbose logging.
 
 One of `usb`, `hid` or `eci`.
 
-- `usb`: Talk to the USB stick with libusb.  Recommended.
-- `hid`: Talk to the USB stick with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
+- `usb`: Talk to USB sticks with libusb.  Recommended.
+- `hid`: Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
 - `eci`: Talk to an ECI device.  The address is specified with `eci_host`.
 
 ### Option: `eci_host` (optional)
