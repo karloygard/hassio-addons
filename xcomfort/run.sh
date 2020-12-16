@@ -16,8 +16,7 @@ DEVICE_NUMBER="$(bashio::config 'device_number')"
 HA_DISCOVERY="$(bashio::config 'ha_discovery')"
 HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
-INTERFACE="$(bashio::config 'interface')"
-ECI_HOST="$(bashio::config 'eci_host')"
+HIDAPI="$(bashio::config 'use_hidapi')"
 ECI_HOSTS="$(bashio::config 'eci_hosts')"
 
 set -- xcomfortd \
@@ -41,19 +40,13 @@ if [ "$VERBOSE" = "true" ]; then
     set -- "$@" --verbose
 fi
 
-if [ "$INTERFACE" = "hid" ]; then
-    set -- "$@" hid \
-        --device-number ${DEVICE_NUMBER}
-elif [ "$INTERFACE" = "usb" ]; then
-    set -- "$@" usb
-elif [ "$INTERFACE" = "eci" ]; then
-    set -- "$@" eci \
-        --host ${ECI_HOST}
-fi
-
 for i in $ECI_HOSTS; do
-	echo host $i
+    set -- "$@" --eci $i
 done
+
+if [ "$HIDAPI" = "true" ]; then
+    set -- "$@" --hidapi
+fi
 
 bashio::log.info "Starting $(xcomfortd --version)"
 bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
