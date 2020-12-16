@@ -26,11 +26,11 @@ Add-on configuration:
 mqtt_client_id: xcomfort
 datapoints_file: ""
 eprom: true
-device_number: 0
 verbose: false
-interface: usb
+use_hidapi: false
 ha_discovery: true
 ha_discovery_prefix: homeassistant
+eci_hosts: ["eci-host-1", "eci-host-2"]
 ```
 
 ### Option: `mqtt_client_id` (required)
@@ -39,15 +39,11 @@ ID of the MQTT client the daemon connects with.
 
 ### Option: `datapoints_file` (optional)
 
-Name of the datapoints file in the Home Assistant configuration directory.  Recommend the `eprom` option instead.
+Name of the datapoints file in the Home Assistant configuration directory.  Only one file can be specified, so if you are using more than one device, the same file will be used for all devices.  Recommend the `eprom` option instead.
 
 ### Option: `eprom` (optional)
 
 Read datapoint list from eprom.
-
-### Option: `device_number` (optional)
-
-USB device number, if more than one is available.
 
 ### Option: `ha_discovery` (required)
 
@@ -61,17 +57,13 @@ The Home Assistant discovery prefix.
 
 Enable verbose logging.
 
-### Option: `interface` (required)
+### Option: `use_hidapi` (required)
 
-One of `usb`, `hid` or `eci`.
+Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes, leaving this to false is recommended.
 
-- `usb`: Talk to USB sticks with libusb.  Recommended.
-- `hid`: Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes.
-- `eci`: Talk to an ECI device.  The address is specified with `eci_host`.
+### Option: `eci_hosts` (required)
 
-### Option: `eci_host` (optional)
-
-Host address of the ECI device, when used.
+Host addresses (array) of ECI devices.
 
 ## License
 
