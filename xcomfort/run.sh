@@ -51,7 +51,7 @@ elif [ "$INTERFACE" = "eci" ]; then
         --host ${ECI_HOST}
 fi
 
-for i in $ECU_HOSTS; do
+for i in $ECI_HOSTS; do
 	echo host $i
 done
 
