@@ -18,6 +18,7 @@ HA_DISCOVERY_PREFIX="$(bashio::config 'ha_discovery_prefix')"
 VERBOSE="$(bashio::config 'verbose')"
 INTERFACE="$(bashio::config 'interface')"
 ECI_HOST="$(bashio::config 'eci_host')"
+ECI_HOSTS="$(bashio::config 'eci_hosts')"
 
 set -- xcomfortd \
     --client-id ${MQTT_CLIENT_ID} \
@@ -51,6 +52,7 @@ elif [ "$INTERFACE" = "eci" ]; then
 fi
 
 bashio::log.info "Starting $(xcomfortd --version)"
+bashio::log.info "Test ${ECI_HOSTS}"
 bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
 
 exec "$@"

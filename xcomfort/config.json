@@ -43,6 +43,7 @@
         "ha_discovery_prefix": "str",
         "verbose": "bool",
         "interface": "list(usb|hid|eci)",
-        "eci_host": "str?"
+        "eci_host": "str?",
+        "eci_hosts": ["str"]
     }
 }
