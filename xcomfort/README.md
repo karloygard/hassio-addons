@@ -33,11 +33,11 @@ ha_discovery_prefix: homeassistant
 eci_hosts: ["eci-host-1", "eci-host-2"]
 ```
 
-### Option: `mqtt_client_id` (required)
+### Option: `mqtt_client_id`
 
 ID of the MQTT client the daemon connects with. 
 
-### Option: `datapoints_file` (optional)
+### Option: `datapoints_file`
 
 Name of the datapoints file in the Home Assistant configuration directory.  Only one file can be specified, so if you are using more than one device, the same file will be used for all devices.  Recommend the `eprom` option instead.
 
