@@ -2,9 +2,9 @@
 
 Enable communication with the Eaton xComfort CKOZ-00/14 USB and CCIA-0x/01 Ethernet Communication Interfaces.
 
-## BREAKING CHANGES
+## BREAKING CHANGES PART II
 
-**Due to support for ECI, the configuration schema had to be reworked and will prevent the daemon from starting if not updated.  Suggested solution is to reset to defaults.**
+**Due to support for for multiple simulateous devices, the configuration schema had to be reworked and will prevent the daemon from starting if not updated.  Suggested solution is to reset to defaults.**
 
 ## About
 
@@ -41,27 +41,27 @@ ID of the MQTT client the daemon connects with.
 
 Name of the datapoints file in the Home Assistant configuration directory.  Only one file can be specified, so if you are using more than one device, the same file will be used for all devices.  Recommend the `eprom` option instead.
 
-### Option: `eprom` (optional)
+### Option: `eprom`
 
 Read datapoint list from eprom.
 
-### Option: `ha_discovery` (required)
+### Option: `ha_discovery`
 
 Make the daemon send MQTT device discovery messages to Home Assistant.
 
-### Option: `ha_discovery_prefix` (required)
+### Option: `ha_discovery_prefix`
 
 The Home Assistant discovery prefix.
 
-### Option: `verbose` (required)
+### Option: `verbose`
 
 Enable verbose logging.
 
-### Option: `use_hidapi` (required)
+### Option: `use_hidapi`
 
 Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes, leaving this to false is recommended.
 
-### Option: `eci_hosts` (required)
+### Option: `eci_hosts`
 
 Host addresses (array) of ECI devices.
 
