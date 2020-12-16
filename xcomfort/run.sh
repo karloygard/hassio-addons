@@ -51,8 +51,11 @@ elif [ "$INTERFACE" = "eci" ]; then
         --host ${ECI_HOST}
 fi
 
+for i in $ECU_HOSTS; do
+	echo host $i
+done
+
 bashio::log.info "Starting $(xcomfortd --version)"
-bashio::log.info "Test ${ECI_HOSTS}"
 bashio::log.info "$(echo $@ | sed s/${MQTT_USER}:${MQTT_PASSWORD}/*****/g)"
 
 exec "$@"
