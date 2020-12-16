@@ -41,7 +41,7 @@ if [ "$VERBOSE" = "true" ]; then
 fi
 
 for i in $ECI_HOSTS; do
-    set -- "$@" --eci $i
+    set -- "$@" --host $i
 done
 
 if [ "$HIDAPI" = "true" ]; then
