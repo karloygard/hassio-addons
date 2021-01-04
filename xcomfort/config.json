@@ -30,6 +30,7 @@
         "eprom": true,
         "ha_discovery": true,
         "ha_discovery_prefix": "homeassistant",
+        "ha_discovery_remove": false,
         "verbose": false,
         "use_hidapi": false,
         "eci_hosts": []
@@ -40,6 +41,7 @@
         "eprom": "bool",
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",
+        "ha_discovery_prefix": "bool",
         "verbose": "bool",
         "use_hidapi": "bool",
         "eci_hosts": ["str"]

@@ -26,6 +26,7 @@ verbose: false
 use_hidapi: false
 ha_discovery: true
 ha_discovery_prefix: homeassistant
+ha_discovery_remove: false
 eci_hosts: ["eci-host-1", "eci-host-2"]
 ```
 
@@ -43,11 +44,15 @@ Read datapoint list from eprom.
 
 ### Option: `ha_discovery`
 
-Make the daemon send MQTT device discovery messages to Home Assistant.
+Make the add-on send MQTT device discovery messages to Home Assistant.
 
 ### Option: `ha_discovery_prefix`
 
 The Home Assistant discovery prefix.
+
+### Option: `ha_discovery_remove`
+
+When set to true, the add-on will send MQTT device discovery messages to clear out devices on configuration changes.  While convenient, this has the unfortunate side effect of also wiping any device configuration that the user may have made in Home Assistant.  Leaving this off makes devices and their associated configuration persistent, but if you remove devices, you will have to manually remove them from Home Assistant.
 
 ### Option: `verbose`
 
