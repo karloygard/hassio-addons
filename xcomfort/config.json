@@ -41,7 +41,7 @@
         "eprom": "bool",
         "ha_discovery": "bool",
         "ha_discovery_prefix": "str",
-        "ha_discovery_prefix": "bool",
+        "ha_discovery_remove": "bool",
         "verbose": "bool",
         "use_hidapi": "bool",
         "eci_hosts": ["str"]
