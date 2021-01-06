@@ -20,27 +20,35 @@ Add-on configuration:
 
 ```yaml
 mqtt_client_id: xcomfort
-datapoints_file: ""
 eprom: true
+datapoints_file: ""
 verbose: false
+eci_hosts: ["eci-host-1", "eci-host-2"]
 use_hidapi: false
 ha_discovery: true
 ha_discovery_prefix: homeassistant
 ha_discovery_remove: false
-eci_hosts: ["eci-host-1", "eci-host-2"]
 ```
 
 ### Option: `mqtt_client_id`
 
 ID of the MQTT client the daemon connects with. 
 
+### Option: `eprom`
+
+Read datapoint list from eprom.
+
 ### Option: `datapoints_file`
 
 Name of the datapoints file in the Home Assistant configuration directory.  Only one file can be specified, so if you are using more than one device, the same file will be used for all devices.  Recommend the `eprom` option instead.
 
-### Option: `eprom`
+### Option: `verbose`
 
-Read datapoint list from eprom.
+Enable verbose logging.
+
+### Option: `eci_hosts`
+
+Host addresses (array) of ECI devices.
 
 ### Option: `ha_discovery`
 
@@ -54,23 +62,15 @@ The Home Assistant discovery prefix.
 
 When set to true, the add-on will send MQTT device discovery messages to clear out devices on configuration changes.  While convenient, this has the unfortunate side effect of also wiping any device configuration that the user may have made in Home Assistant.  Leaving this off makes devices and their associated configuration persistent, but if you remove devices, you will have to manually remove them from Home Assistant.
 
-### Option: `verbose`
-
-Enable verbose logging.
-
 ### Option: `use_hidapi`
 
 Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and is only included for testing purposes, leaving this to false is recommended.
-
-### Option: `eci_hosts`
-
-Host addresses (array) of ECI devices.
 
 ## License
 
 MIT License
 
-Copyright (c) 2020 Guðmundur Björn Birkisson and Karl Anders Øygard
+Copyright (c) 2021 Karl Anders Øygard and Guðmundur Björn Birkisson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
