@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.27
+
+- Make switching actuator autodetect as light if name is prepended with 'LI_'.
+- Make verbose log tx packets
+
 ## 0.26
 
 - Add motion detector support
