@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.28
+
+- Make --verbose log version number.
+
 ## 0.27
 
 - Make switching actuator autodetect as light if name is prepended with 'LI_'.
