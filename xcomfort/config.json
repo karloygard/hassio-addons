@@ -15,9 +15,7 @@
     "privileged": [
         "SYS_RAWIO"
     ],
-    "devices": [
-        "/dev/bus/usb:/dev/bus/usb:rwm"
-    ],
+    "usb": true,
     "map": [
         "config"
     ],
