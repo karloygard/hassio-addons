@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.28.1
+
+- Update config.json
+
 ## 0.28
 
 - Make --verbose log version number.
