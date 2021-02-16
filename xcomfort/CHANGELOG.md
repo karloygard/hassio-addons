@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.29
+
+- WIP code for NG heating actuator
+- Abstract extended status message
+
 ## 0.28.1
 
 - Update config.json
