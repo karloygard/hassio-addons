@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.30
+
+- Tweak autodiscovery for CRCA-00/0x devices
+
 ## 0.29
 
 - WIP code for NG heating actuator
