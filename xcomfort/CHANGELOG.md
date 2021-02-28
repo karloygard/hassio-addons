@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.31
+
+- Resubscribe every time MQTT disconnects, add more error reporting
+- Back off to one TX at a time, to prevent lost messages
+
 ## 0.30
 
 - Tweak autodiscovery for CRCA-00/0x devices
