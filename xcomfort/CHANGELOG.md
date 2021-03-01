@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.32
+
+- Make all MQTT messages retained
+- Bump to alpine 3.13
+
 ## 0.31
 
 - Resubscribe every time MQTT disconnects, add more error reporting
