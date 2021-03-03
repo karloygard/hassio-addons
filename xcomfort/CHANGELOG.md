@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.33
+
+- Support energy messages
+- Expose battery status for CTEU-02/0x devices
+
 ## 0.32
 
 - Make all MQTT messages retained
