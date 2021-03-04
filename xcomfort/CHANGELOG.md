@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.34
+
+- Attempt to support CKOZ-00/03
+
 ## 0.33
 
 - Support energy messages
