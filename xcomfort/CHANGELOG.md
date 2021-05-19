@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.35
+
+- Some extra logging for MQTT
+- Let new commands to actuators discard older waiting commands
+- Fix for TX commands that are silently lost
+
 ## 0.34
 
 - Attempt to support CKOZ-00/03
