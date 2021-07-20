@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.36
+
+- Attempt to expose wheel temperature offset for RCT
+
 ## 0.35
 
 - Some extra logging for MQTT
