@@ -8,7 +8,7 @@ To view the source code of this daemon, go to [github.com/karloygard/xcomfortd-g
 
 ## How to use
 
-Datapoints can be read out from the eprom of the CI, and must be kept updated if and when devices are added.  Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this.  For testing purposes, both TXT and DPL file formats are supported, but the latter format is generally superior.
+By default, datapoints are read out from the eprom of the CI, and *must be kept updated if and when devices are added*.  Consult the [MRF manual](http://www.eaton.com/ecm/groups/public/@pub/@eatonnl/@electrical/documents/content/pct_325435.pdf) (paragraph USB-RF-Communication Stick) for documentation on how to do this.  For testing purposes, both TXT and DPL file formats are supported, but the latter format is generally superior.
 
 Switching actuators are by default configured as switches in Home Assistant.  This may not be the desired behaviour if the actuator is controlling a light source.  You can force datapoints to be configured as light sources by prepending the datapoint name in MRF with `LI_`, e.g. a switching actuator named `Bathroom actuator` will be discovered as a switch, while the same actuator named `LI_Bathroom actuator` will be discovered as a light source.
 
