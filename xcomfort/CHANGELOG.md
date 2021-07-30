@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.37
+
+ - Handle CI that doesn't support extended commands
+
 ## 0.36
 
 - Attempt to expose wheel temperature offset for RCT
