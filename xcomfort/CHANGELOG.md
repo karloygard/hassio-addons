@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.38
+
+ - Add logging for extended commands
+
 ## 0.37
 
  - Handle CI that doesn't support extended commands
