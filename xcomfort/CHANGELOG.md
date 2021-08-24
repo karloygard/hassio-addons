@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.39
+
+ - Log correct name for heating actuators
+
 ## 0.38
 
  - Add logging for extended commands
