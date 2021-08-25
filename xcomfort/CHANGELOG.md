@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.39
+## 0.39.1
 
  - Log correct name for heating actuators
 
