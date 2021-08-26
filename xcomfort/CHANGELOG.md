@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.40
+
+ - Initial (broken) support for heating actuators
+
 ## 0.39.1
 
  - Log correct name for heating actuators
