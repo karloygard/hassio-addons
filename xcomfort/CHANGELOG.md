@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.41
+
+ - Prevent lost temperature commands to heating actuators
+ - Add power reporting to devices that support it via extended messages
+
 ## 0.40
 
  - Initial (broken) support for heating actuators
