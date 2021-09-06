@@ -12,6 +12,24 @@ By default, datapoints are read out from the eprom of the CI, and *must be kept 
 
 Switching actuators are by default configured as switches in Home Assistant.  This may not be the desired behaviour if the actuator is controlling a light source.  You can force datapoints to be configured as light sources by prepending the datapoint name in MRF with `LI_`, e.g. a switching actuator named `Bathroom actuator` will be discovered as a switch, while the same actuator named `LI_Bathroom actuator` will be discovered as a light source.
 
+Heating actuators are supported as climate devices.  However, MQTT discovery doesn't specify a way of sending current temperature to the device, only reading it.  To work around this, current temperature is exposed in a separate `number.{name of the device}_current` entity on the device.  Writing a value to this entity will send it to the device.  The heating actuator will go into emergency mode if the current or desired temperature isn't updated once every hour.  The following automation copies the temperature from a sensor to the climate entity when it changes or every 30 minutes:
+
+```- alias: Copy temperature to heating actuator
+  description: Update current temp on change or every 30 min
+  trigger:
+  - platform: state
+    entity_id: sensor.{name of the sensor}
+  - platform: time_pattern
+    minutes: '/30'
+  condition: []
+  action:
+  - service: number.set_value
+    target:
+      entity_id: number.{name of the heating actuator}_current
+    data_template:
+      value: '{{ states(''sensor.{name of the sensor}'') }}'
+```
+
 ## Configuration
 
 Add-on configuration:

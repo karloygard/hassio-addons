@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.42
+
+ - MQTT discovery: add state_class to sensors
+
 ## 0.41
 
  - Prevent lost temperature commands to heating actuators
