@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.43
+
+ - Support CDWA-01/3x
+
 ## 0.42
 
  - MQTT discovery: add state_class to sensors
