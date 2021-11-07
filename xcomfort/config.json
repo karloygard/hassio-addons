@@ -1,6 +1,6 @@
 {
     "name": "xComfort",
-    "version": "0.43",
+    "version": "0.44",
     "slug": "xcomfort",
     "description": "Eaton xComfort to MQTT gateway",
     "startup": "application",

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.44
+
+ - Resend extended commands if no response is received within 5 seconds
+
 ## 0.43
 
  - Support CDWA-01/3x
