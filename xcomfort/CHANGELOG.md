@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.45
+
+ - Add support for CHAZ-01/01
+
 ## 0.44
 
  - Resend extended commands if no response is received within 5 seconds
