@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.46
+
+ - Tweak DIMPLEX commands for CHAZ-01/01
+
 ## 0.45
 
  - Add support for CHAZ-01/01
