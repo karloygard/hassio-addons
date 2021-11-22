@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.47
+
+ - Add stopped state to shutters
+
 ## 0.46
 
  - Tweak DIMPLEX commands for CHAZ-01/01
