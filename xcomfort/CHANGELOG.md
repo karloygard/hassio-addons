@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.48
+
+ - Fix bug causing MQTT birth message not to be received and autodiscovery not to be restarted.
+
 ## 0.47
 
  - Add stopped state to shutters
