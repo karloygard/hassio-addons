@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.50
+
+ - Fix bug where lost messages wouldn't be detected.
+
 ## 0.49
 
  - Use correct unit of measurement for temperature.
