@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.51
+
+ - Attempt to extract name for device.
+
 ## 0.50
 
  - Fix bug where lost messages wouldn't be detected.
