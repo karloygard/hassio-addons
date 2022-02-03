@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.52
+
+ - Attempt to support analog sensors.
+
 ## 0.51
 
  - Attempt to extract name for device.
