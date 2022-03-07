@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.53
+
+ - Test changing names of entities.
+
 ## 0.52
 
  - Attempt to support analog sensors.
