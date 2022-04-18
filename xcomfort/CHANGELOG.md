@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.54
+
+ - Add log redaction for libusb brokenness.
+
 ## 0.53
 
  - Test changing names of entities.
