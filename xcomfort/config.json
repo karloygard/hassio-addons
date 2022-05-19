@@ -16,6 +16,7 @@
         "SYS_RAWIO"
     ],
     "usb": true,
+    "init": false,
     "map": [
         "config:rw"
     ],
