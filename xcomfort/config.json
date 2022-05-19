@@ -5,6 +5,7 @@
     "description": "Eaton xComfort to MQTT gateway",
     "startup": "application",
     "boot": "auto",
+    "init": false,
     "arch": [
         "aarch64",
         "amd64",
