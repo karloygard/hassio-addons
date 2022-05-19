@@ -7,7 +7,4 @@ ENV LANG C.UTF-8
 COPY --from=karloygard/xcomfortd:latest /usr/bin/xcomfortd /usr/bin/xcomfortd
 COPY --from=karloygard/xcomfortd:latest /usr/lib/libusb-1.* /usr/lib/
 
-# Add run script
-COPY run.sh /run.sh
-
-CMD [ "/run.sh" ]
+COPY rootfs /
