@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.55
+
+ - Update go modules
+ - Prevent a buffer overflow
+
 ## 0.54
 
  - Add log redaction for libusb brokenness.
