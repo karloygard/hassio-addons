@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.56
+
+ - Ignore unexpected input
+
 ## 0.55
 
  - Update go modules
