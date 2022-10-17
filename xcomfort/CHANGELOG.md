@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.57
+
+ - Don't overwrite last dimmer value when switching off
+ - Add name to Power and Battery entities
+
 ## 0.56
 
  - Ignore unexpected input
