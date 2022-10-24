@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.58
+
+ - Attempt to make the code work better on RF < 90
+
 ## 0.57
 
  - Don't overwrite last dimmer value when switching off
