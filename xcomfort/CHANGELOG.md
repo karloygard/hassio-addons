@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.60
+
+ - Attempt to support pulses
+
 ## 0.59
 
  - Change unit of measurement for signal strength
