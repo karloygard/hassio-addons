@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.59
+
+ - Change unit of measurement for signal strength
+
 ## 0.58
 
  - Attempt to make the code work better on RF < 90
