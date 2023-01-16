@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.61
+
+ - Use sensor instead of number for pulses
+
 ## 0.60
 
  - Attempt to support pulses
