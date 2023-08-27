@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.62
+
+ - Attempt to fix HA entity name issues
+
 ## 0.61
 
  - Use sensor instead of number for pulses
