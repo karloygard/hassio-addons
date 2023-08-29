@@ -2,7 +2,7 @@
 
 ## 0.62
 
- - Attempt to fix HA entity name issues
+ - Attempt to fix HA entity name issues.  BREAKING CHANGE: this change may cause existing automations on switches, etc. to stop working.  Deleting and recreating the automations will resolve the issue.
 
 ## 0.61
 
