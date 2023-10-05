@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.63
+
+ - Adding support for CJAU-01/04 Shutter Actuator (@docstalek)
+
 ## 0.62
 
  - Attempt to fix HA entity name issues.  BREAKING CHANGE: this change may cause existing automations on switches, etc. to stop working.  Deleting and recreating the automations will resolve the issue.
