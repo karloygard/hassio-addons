@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.64
+
+ - Set retained=false when a pushbutton event is triggered (@docstalek)
+
 ## 0.63
 
  - Adding support for CJAU-01/04 Shutter Actuator (@docstalek)
