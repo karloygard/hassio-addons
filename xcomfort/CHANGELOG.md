@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.65
+
+ - Ensure strict ordering of USB devices.
+ - Remove unused parameter.
+ - Update modules.
+
 ## 0.64
 
  - Set retained=false when a pushbutton event is triggered (@docstalek)
