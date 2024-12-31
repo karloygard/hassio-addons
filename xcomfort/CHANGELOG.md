@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.66
+
+ - Adding extended status support for shutters (@docstalek)
+
 ## 0.65
 
  - Ensure strict ordering of USB devices.
