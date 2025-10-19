@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.67
+
+ - Mark CDWA-01/3x as battery operated
+
 ## 0.66
 
  - Adding extended status support for shutters (@docstalek)
