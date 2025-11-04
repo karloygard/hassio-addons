@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.68
+
+ - Attempt to receive HRV events.
+
 ## 0.67
 
  - Mark CDWA-01/3x as battery operated
