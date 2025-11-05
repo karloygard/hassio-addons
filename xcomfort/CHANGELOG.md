@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.69
+
+ - Add temperature and valve position for HRV.
+
 ## 0.68
 
  - Attempt to receive HRV events.
