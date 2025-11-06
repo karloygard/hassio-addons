@@ -1,8 +1,12 @@
 # Changelog
 
-## 0.69
+## 0.70
 
  - Add temperature and valve position for HRV.
+
+## 0.69
+
+ - Fix up temperature reading from HRV.
 
 ## 0.68
 
