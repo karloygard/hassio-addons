@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.72
+
+ - Initial implementation of controlling HRV (with help from @hjzimmer).
+
 ## 0.71
 
  - Actually fix up temperature reading from HRV.
