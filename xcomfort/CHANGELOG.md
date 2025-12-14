@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.73
+
+ - Use current temperature if desired temp not set, plus fixes.
+
 ## 0.72
 
  - Initial implementation of controlling HRV (with help from @hjzimmer).
