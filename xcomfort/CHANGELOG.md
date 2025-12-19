@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.74
+
+ - Attempt to return current temperature correctly.
+
 ## 0.73
 
  - Use current temperature if desired temp not set, plus fixes.
